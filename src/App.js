@@ -8,7 +8,7 @@ import Detail from "./pages/Detail";
 function App() {
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router path={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/to-do-manager">
           <TodoManager />
