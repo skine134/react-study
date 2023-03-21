@@ -8,7 +8,22 @@ import Detail from "./routes/Detail";
 function App() {
 
   return (
-    <h1>hello</h1>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route path="/to-do-manager">
+          <TodoManager />
+        </Route>
+        <Route path="/coin-tracker">
+          <CoinTracker />
+        </Route>
+        <Route path="/movie/:id">
+          <Detail />
+        </Route>
+        <Route path="/">
+          <MovieList />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
